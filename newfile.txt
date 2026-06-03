@@ -1,0 +1,10 @@
+# 1. احتفظ بنسخة احتياطية من المفتاح القديم
+mv ~/.ssh/id_rsa ~/.ssh/id_rsa_old
+mv ~/.ssh/id_rsa.pub ~/.ssh/id_rsa_old.pub
+
+# 2. انسخ المفتاح الجديد كأنه القديم
+cp ~/.ssh/id_ed25519_github ~/.ssh/id_rsa
+cp ~/.ssh/id_ed25519_github.pub ~/.ssh/id_rsa.pub
+
+# 3. جرب ال clone
+git clone git@github.com:malkamel/Test-Repo.git
